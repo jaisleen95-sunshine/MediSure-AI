@@ -93,7 +93,7 @@ Open the local URL displayed in your terminal.
 
 **Hackathon:** GRAVITON 2026
 
-**Theme:** HealthTech
+**Theme:** Open Innovation
 
 **Team Members:**
 - Harshita — Team Leader
@@ -121,6 +121,6 @@ Uploaded report information is processed using the third-party Gemini API. Use f
 
 ---
 
-**Developed by Team IdeaOrbit ❤️**
+**Developed by Team IdeaOrbit 🤍**
 
-*GRAVITON 2026 — HealthTech*
+*GRAVITON 2026*
