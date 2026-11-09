@@ -1,0 +1,438 @@
+
+/* ==========================================
+   MEDISURE AI — PROFESSIONAL UI
+   Clean, responsive healthcare interface
+   ========================================== */
+
+:root {
+    --teal: #087e78;
+    --teal-dark: #07645f;
+    --teal-light: #eaf7f4;
+    --navy: #183346;
+    --muted: #657b87;
+    --line: #dce8e9;
+    --bg: #f4f8f9;
+    --white: #ffffff;
+}
+
+/* ---------- PAGE & TYPOGRAPHY ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.stApp {
+    background: linear-gradient(
+        180deg,
+        #edf6f6 0%,
+        #f6f9fb 290px,
+        #f7fafb 100%
+    );
+    color: var(--navy);
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+.stApp .block-container {
+    max-width: 1100px;
+    padding: 2.2rem 2.6rem 3rem;
+}
+
+.stApp p {
+    line-height: 1.6;
+}
+
+.stApp h1 {
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.045em;
+    color: #153d47;
+    margin: 0.05rem 0 0.15rem;
+}
+
+.stApp h2 {
+    font-size: 1.55rem !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.025em;
+    color: #183c47;
+}
+
+.stApp h3 {
+    font-size: 1.16rem !important;
+    font-weight: 730 !important;
+    color: #193d48;
+}
+
+[data-testid="stCaptionContainer"] {
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+/* ---------- INTRO & PROGRESS ---------- */
+
+.ms-kicker {
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.2rem;
+}
+
+.ms-intro {
+    color: #526e79;
+    font-size: 1rem;
+    margin: 0 0 1.15rem;
+}
+
+.ms-progress {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6rem;
+    margin: 0.9rem 0 1.75rem;
+}
+
+.ms-step {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-width: 0;
+    padding: 0.76rem 0.88rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--white);
+    color: #68808a;
+    font-size: 0.88rem;
+    font-weight: 670;
+}
+
+.ms-step b {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    background: #edf2f4;
+    color: #607983;
+    font-size: 0.76rem;
+}
+
+.ms-step.active {
+    border-color: #7dbbb6;
+    background: var(--teal-light);
+    color: #075e5b;
+    box-shadow: 0 3px 12px #087e7811;
+}
+
+.ms-step.active b {
+    background: var(--teal);
+    color: white;
+}
+
+.ms-step.done {
+    color: #376f6b;
+    background: #f4fbf9;
+}
+
+.ms-step.done b {
+    background: #d7f0e8;
+    color: #14766b;
+}
+
+/* ---------- CUSTOM TEXT ELEMENTS ---------- */
+
+.ms-eyebrow {
+    color: var(--teal);
+    font-weight: 750;
+    font-size: 0.77rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.35rem;
+}
+
+.ms-note {
+    background: var(--teal-light);
+    border: 1px solid #cbe7df;
+    border-radius: 11px;
+    padding: 0.82rem 1rem;
+    color: #346762;
+    font-size: 0.87rem;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.55;
+}
+
+.ms-footer {
+    margin-top: 1.25rem;
+    padding: 1rem 0;
+    color: #788d98;
+    font-size: 0.78rem;
+    border-top: 1px solid var(--line);
+}
+
+/* ---------- CARDS & CONTAINERS ---------- */
+
+[data-testid="stVerticalBlockBorderWrapper"] > div {
+    border-radius: 17px !important;
+    border-color: #dfebec !important;
+    background: var(--white) !important;
+    box-shadow: 0 8px 30px #284e5710;
+}
+
+/* ---------- FILE UPLOADER ---------- */
+
+[data-testid="stFileUploader"] {
+    margin-top: 0.4rem;
+}
+
+[data-testid="stFileUploaderDropzone"] {
+    border: 1.5px dashed #9fcac5 !important;
+    border-radius: 13px !important;
+    background: linear-gradient(
+        135deg,
+        #f1fbf8,
+        #f8fcfc
+    ) !important;
+    min-height: 146px;
+    padding: 1rem !important;
+}
+
+[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: var(--teal) !important;
+    background: #eff9f6 !important;
+}
+
+[data-testid="stFileUploaderDropzone"] button {
+    background: white !important;
+    border: 1px solid #b5d6d1 !important;
+    border-radius: 9px !important;
+    color: #126c67 !important;
+    font-weight: 650 !important;
+}
+
+/* ---------- FORMS ---------- */
+
+[data-testid="stForm"] {
+    border: 1px solid var(--line) !important;
+    border-radius: 15px !important;
+    background: var(--white) !important;
+    padding: 1.25rem !important;
+    box-shadow: 0 7px 24px #244d5710;
+}
+
+[data-testid="stCheckbox"] {
+    padding: 0.4rem 0;
+}
+
+/* ---------- TABLES ---------- */
+
+[data-testid="stDataFrame"],
+[data-testid="stDataEditor"] {
+    border: 1px solid #deeaeb;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ---------- RESULT METRICS ---------- */
+
+[data-testid="stMetric"] {
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: var(--white);
+    box-shadow: 0 5px 18px #244d570b;
+    padding: 1.15rem 1.2rem;
+    min-height: 117px;
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--muted);
+    font-weight: 640;
+}
+
+[data-testid="stMetricValue"] {
+    color: #124c50;
+    font-size: 2.05rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+/* ==========================================
+   BUTTON SYSTEM — CONSISTENT DESIGN
+   ========================================== */
+
+.stButton,
+.stDownloadButton,
+[data-testid="stFormSubmitButton"] {
+    width: 100%;
+}
+
+/* Shared sizing and alignment */
+
+.stButton > button,
+.stDownloadButton > button,
+[data-testid="stFormSubmitButton"] > button {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 0.65rem 1rem !important;
+    border-radius: 10px !important;
+    font-size: 0.91rem !important;
+    font-weight: 650 !important;
+    line-height: 1.35 !important;
+    box-shadow: none !important;
+    transition:
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        box-shadow 0.18s ease !important;
+}
+
+/* All secondary buttons */
+
+.stButton > button:not([kind="primary"]),
+.stDownloadButton > button:not([kind="primary"]),
+[data-testid="stFormSubmitButton"] > button:not([kind="primary"]) {
+    background: #ffffff !important;
+    color: #08716c !important;
+    border: 1px solid #c9dedb !important;
+}
+
+/* Secondary hover */
+
+.stButton > button:not([kind="primary"]):hover,
+.stDownloadButton > button:not([kind="primary"]):hover,
+[data-testid="stFormSubmitButton"] > button:not([kind="primary"]):hover {
+    background: #eaf7f4 !important;
+    color: #075e58 !important;
+    border-color: #087e78 !important;
+}
+
+/* Primary buttons */
+
+.stButton > button[kind="primary"],
+.stDownloadButton > button[kind="primary"],
+[data-testid="stFormSubmitButton"] > button[kind="primary"],
+button[data-testid="stBaseButton-primary"] {
+    background: #087e78 !important;
+    color: #ffffff !important;
+    border: 1px solid #087e78 !important;
+}
+
+/* Primary hover */
+
+.stButton > button[kind="primary"]:hover,
+.stDownloadButton > button[kind="primary"]:hover,
+[data-testid="stFormSubmitButton"] > button[kind="primary"]:hover,
+button[data-testid="stBaseButton-primary"]:hover {
+    background: #07645f !important;
+    color: #ffffff !important;
+    border-color: #07645f !important;
+}
+
+/* Keep text readable in all states */
+
+.stButton > button p,
+.stDownloadButton > button p,
+[data-testid="stFormSubmitButton"] > button p,
+.stButton > button span,
+.stDownloadButton > button span {
+    color: inherit !important;
+}
+
+/* Focus accessibility */
+
+.stButton > button:focus-visible,
+.stDownloadButton > button:focus-visible,
+[data-testid="stFormSubmitButton"] > button:focus-visible {
+    outline: 3px solid #85cfc6 !important;
+    outline-offset: 2px;
+}
+
+/* Disabled buttons */
+
+.stButton > button:disabled,
+.stDownloadButton > button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* ---------- ALERTS & DIVIDERS ---------- */
+
+[data-testid="stAlert"],
+[data-testid="stStatusWidget"] {
+    border-radius: 12px !important;
+}
+
+[data-testid="stAlert"] {
+    font-size: 0.9rem;
+}
+
+hr {
+    border-color: #dbe8e9 !important;
+}
+
+/* ---------- TABLET & MOBILE ---------- */
+
+@media (max-width: 750px) {
+
+    .stApp .block-container {
+        padding: 1.15rem 0.85rem 2rem;
+    }
+
+    .stApp h1 {
+        font-size: 1.9rem !important;
+    }
+
+    .stApp h2 {
+        font-size: 1.32rem !important;
+    }
+
+    .ms-progress {
+        gap: 0.3rem;
+    }
+
+    .ms-step {
+        padding: 0.5rem 0.4rem;
+        gap: 0.3rem;
+        font-size: 0.69rem;
+    }
+
+    .ms-step b {
+        width: 20px;
+        height: 20px;
+        font-size: 0.67rem;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 0.8rem 0.65rem;
+        min-height: 92px;
+    }
+
+    [data-testid="stMetricValue"] {
+        font-size: 1.42rem;
+    }
+
+    [data-testid="stMetricLabel"] {
+        font-size: 0.76rem;
+    }
+
+    [data-testid="stForm"] {
+        padding: 0.8rem !important;
+    }
+
+    .stButton > button,
+    .stDownloadButton > button {
+        min-height: 46px !important;
+    }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .stButton > button,
+    .stDownloadButton > button,
+    [data-testid="stFormSubmitButton"] > button {
+        transition: none !important;
+    }
+}
